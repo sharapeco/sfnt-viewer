@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--fg: #2f3032;
+	--bg: #fff;
+	--bd: #d4d7db;
+	--link-fg: #0173b5db;
+	--value-bg: #bfdff5;
+	--value-rep-bg: #eae1b3;
+	--value-rep-bg-alt: #f1eac7;
+	--value-unk-bg: #c0c8ce;
+	--width-per-byte: 8rem;
+}
+
+:root {
+	font-family: sans-serif;
+	line-height: 1.5;
+	color: var(--fg);
+	background: var(--bg);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
