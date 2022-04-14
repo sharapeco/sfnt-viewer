@@ -178,6 +178,27 @@ export const defs = {
 		{ type: TYPE.int16, label: 'indexToLocFormat', description: '0 for short offsets (Offset16), 1 for long (Offset32).' },
 		{ type: TYPE.int16, label: 'glyphDataFormat', description: '0 for current format.' }
 	],
+	hhea: [
+		{ type: TYPE.uint16, label:'majorVersion', description: 'Major version number of the horizontal header table — set to 1.' },
+		{ type: TYPE.uint16, label:'minorVersion', description: 'Minor version number of the horizontal header table — set to 0.' },
+		{ type: TYPE.FWORD, label:'ascender', description: 'Typographic ascent—see note below.' },
+		{ type: TYPE.FWORD, label:'descender', description: 'Typographic descent—see note below.' },
+		{ type: TYPE.FWORD, label:'lineGap', description: `Typographic line gap.
+Negative LineGap values are treated as zero in some legacy platform implementations.` },
+		{ type: TYPE.UFWORD, label:'advanceWidthMax', description: 'Maximum advance width value in "hmtx" table.' },
+		{ type: TYPE.FWORD, label:'minLeftSideBearing', description: 'Minimum left sidebearing value in "hmtx" table for glyphs with contours (empty glyphs should be ignored).' },
+		{ type: TYPE.FWORD, label:'minRightSideBearing', description: 'Minimum right sidebearing value; calculated as min(aw - (lsb + xMax - xMin)) for glyphs with contours (empty glyphs should be ignored).' },
+		{ type: TYPE.FWORD, label:'xMaxExtent', description: 'Max(lsb + (xMax - xMin)).' },
+		{ type: TYPE.int16, label:'caretSlopeRise', description: 'Used to calculate the slope of the cursor (rise/run); 1 for vertical.' },
+		{ type: TYPE.int16, label:'caretSlopeRun', description: '0 for vertical.' },
+		{ type: TYPE.int16, label:'caretOffset', description: 'The amount by which a slanted highlight on a glyph needs to be shifted to produce the best appearance. Set to 0 for non-slanted fonts' },
+		{ type: TYPE.int16, label: '(reserved)', description: 'set to 0' },
+		{ type: TYPE.int16, label: '(reserved)', description: 'set to 0' },
+		{ type: TYPE.int16, label: '(reserved)', description: 'set to 0' },
+		{ type: TYPE.int16, label: '(reserved)', description: 'set to 0' },
+		{ type: TYPE.int16, label:'metricDataFormat', description: '0 for current format.' },
+		{ type: TYPE.uint16, label:'numberOfHMetrics', description: 'Number of hMetric entries in "hmtx" table' },
+	],
 	/**
 	 * @param {DataView} view
 	 * @param {number} offset
